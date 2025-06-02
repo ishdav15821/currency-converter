@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online currency converter with real-time exchange rates">
+    <title>Global Currency Converter | Real-Time Exchange Rates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="converter-container">
+        <h2>Global Currency Converter</h2>
+        
+        <p id="statusMessage" class="status-message loading">
+            <i class="fas fa-spinner spin"></i> Initializing currency data...
+        </p>
+
+        <div class="input-group">
+            <div class="currency-input">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" class="input-field" value="1.00" min="0.01" step="0.01" placeholder="Enter amount">
+            </div>
+            <div class="currency-input">
+                <label for="fromCurrency">From Currency</label>
+                <select id="fromCurrency" class="input-field"></select>
+            </div>
+            <div class="currency-input">
+                <label for="toCurrency">To Currency</label>
+                <select id="toCurrency" class="input-field"></select>
+            </div>
+        </div>
+
+        <button id="swapButton" class="swap-button" title="Swap currencies">
+            <i class="fas fa-exchange-alt"></i>
+        </button>
+
+        <button id="convertButton" class="convert-button" disabled>
+            <i class="fas fa-exchange-alt"></i> Convert
+        </button>
+
+        <div id="result" class="success">
+            <div id="resultContent">Enter values to convert</div>
+        </div>
+
+        <div id="rateInfo" class="rate-info"></div>
+        
+        <div id="lastUpdated" class="last-updated"></div>
+
+<div class="footer">
+    <p>Developed by <a href="https://github.com/ishdav15821" target="_blank" rel="noopener">David ISHIMWE</a></p>
+    <p>Data provided by <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">ExchangeRate-API</a></p>
+    <p>Note: Rates are updated every 24 hours. For real-time rates, please use a paid API plan.</p>
+</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
